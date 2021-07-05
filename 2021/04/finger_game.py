@@ -1,6 +1,6 @@
 """Game file
 
-Author: chunyang.feng@17zuoye.com
+Author: Fengchunyang
 
 Date: 2021/4/26 17:09
 
