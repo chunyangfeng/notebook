@@ -26,7 +26,7 @@ npm install style-resources-loader
 ```
 
 3. 配置
-编辑vue.config.js(vue-cli3默认没有这个文件，创建它)
+编辑vue.config.js(vue-cli3默认没有这个文件，创建它(和src目录平级))
 ```javascript
 /*
 全局vue-cli配置
