@@ -58,8 +58,15 @@ yum install neo4j-enterprise -y  # 企业版
 vim /etc/neo4j/neo4j.conf
 
 ```shell
-# 去掉注释，让服务绑定在ip地址上
+# 由于社区版不支持创建数据库，因此修改默认数据库，让neo4j自动创建
+9 dbms.default_database=gaia
+
+# 去掉注释，让服务绑定在公网网卡上
 71 dbms.default_listen_address=0.0.0.0
+
+# 去掉注释，将可视化接口地址绑定在公网网卡上
+97 dbms.connector.http.listen_address=0.0.0.0:7474
+98 dbms.connector.http.advertised_address=0.0.0.0:7474
 ```
 
 ##### 服务管理
@@ -72,4 +79,23 @@ systemctl enalbe neo4j
 启动服务
 ```shell
 systemctl start neo4j
+```
+
+##### 浏览器访问
+
+访问地址
+```shell
+ip:7474
+```
+
+初始账号密码为
+```shell
+neo4j/neo4j
+```
+
+#### 资料参考
+
+官方文档
+```shell
+https://neo4j.com/docs/operations-manual/4.3/
 ```
