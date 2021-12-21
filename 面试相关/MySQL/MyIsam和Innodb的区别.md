@@ -1,0 +1,9 @@
+- **InnoDB支持事务，MyISAM不支持**
+- **InnoDB支持外键，而MyISAM不支持**
+- InnoDB是聚集索引，使用B+Tree作为索引结构，数据文件是和（主键）索引绑在一起的，MyISAM是非聚集索引，也是使用B+Tree作为索引结构，索引和数据文件是分离的
+- InnoDB不保存表的具体行数，而MyISAM用一个变量保存了整个表的行数，执行上述语句时只需要读出该变量即可，速度很快（注意不能加有任何WHERE条件）
+- Innodb不支持全文索引，而MyISAM支持全文索引，在涉及全文索引领域的查询效率上MyISAM速度更快高；PS：5.7以后的InnoDB支持全文索引了
+- MyISAM表格可以被压缩后进行查询操作
+- **InnoDB支持表、行(默认)级锁，而MyISAM支持表级锁**
+- **InnoDB表必须有唯一索引（如主键）**
+- Innodb存储文件有frm、ibd，而Myisam是frm、MYD、MYI

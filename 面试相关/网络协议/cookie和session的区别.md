@@ -1,0 +1,4 @@
+- 两者都是会话跟踪技术，用来确定用户身份的机制
+- cookie在客户端记录信息，session在服务端记录信息
+- cookie不安全，大小有限制，最大3k；session较安全，但访问增多，会占用内存
+- cookie、session分属客户端和服务端，但服务端session的实现依赖于cookie，sessionId作为请求header，保存容器是cookie。但并不完全依赖于cookie

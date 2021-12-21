@@ -1,0 +1,1 @@
+mysqldump  --skip-opt -h 1.1.1.1 -P 3306 -u root -p `123456` --databases > ./backup.sql
