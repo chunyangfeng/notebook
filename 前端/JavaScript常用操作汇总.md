@@ -49,3 +49,10 @@ getKey(dict, 78)  => 'cherry'
 ```
 
 **需要注意的是，上述方案对于嵌套结构是无效的，如果Object的value是一个复杂的嵌套结构，那么在进行value的比较的时候会失败，因为{"key": 1} === {"key": 1}的真值为false**
+
+
+#### 去除字符串前后的空格
+```javascript
+const str = "  123456   "
+str.replace(/^(\s|\u00A0)+/,'').replace(/(\s|\u00A0)+$/,'')
+```
